@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>{{board}}</title>
+</head>
+
+<body>
+  {% for url in urls %}
+  <a href="/thread/{{url}}"><p> {{url}} </p></a>
+  {% endfor %}
+</body>
+</html>
