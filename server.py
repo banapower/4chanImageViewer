@@ -4,9 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def print_t():
-    #  if page < 1 or page > 10:
-    #      return 'Wrong page number'
+def show_threads():
     urls = get_thread_urls(get_pages())
     return render_template('home.html', urls=urls, board=BOARD)
 
