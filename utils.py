@@ -2,7 +2,6 @@ import requests
 
 API_BOARD = 'http://a.4cdn.org/{0}/catalog.json'
 API_THREAD = 'http://a.4cdn.org/{0}/thread/{1}.json'
-
 IMG_SOURCE = 'http://i.4cdn.org/{0}/{1}'
 
 
@@ -17,7 +16,6 @@ def send_request(url):
 def get_pages(board, page=None):
     json = send_request(API_BOARD.format(board))
     if json is not None:
-        print len(json)
         if page is None:
             return [page for page in json]
         return json[page - 1]['threads']
